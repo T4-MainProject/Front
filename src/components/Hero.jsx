@@ -3,13 +3,21 @@ import React from 'react'
 
 export default function Hero() {
   return (
-    <section
-      className="
-        relative flex items-center justify-center text-center
-        bg-[url('/hero-bg.jpg')] bg-cover bg-center bg-fixed
-        h-72 md:h-96
-      "
-    >
+    <section className="relative flex items-center justify-center text-center h-72 md:h-96 overflow-hidden">
+      {/* 비디오 배경 */}
+      <video
+        className="absolute inset-0 w-full h-full object-cover"
+        autoPlay
+        muted
+        loop
+        playsInline
+      >
+        <source src="/13929368_2560_1440_30fps.mp4" type="video/mp4" />
+        {/* 비디오를 지원하지 않는 브라우저를 위한 폴백 */}
+        Your browser does not support the video tag.
+      </video>
+
+      {/* 어두운 오버레이 */}
       <div className="absolute inset-0 bg-black/40" />
 
       {/* 텍스트 그룹 전체에 fade-down */}

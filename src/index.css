@@ -1,0 +1,13 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* 클로바노트 느낌의 타이포 스타일 */
+@layer base {
+  h1, .hero-title {
+    @apply text-4xl md:text-5xl font-extrabold text-gray-900 mb-4;
+  }
+  p, .hero-sub {
+    @apply text-lg text-gray-700 mb-6;
+  }
+}
